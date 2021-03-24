@@ -1,3 +1,12 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  namespace :api do
+    resources :blogs do
+      resources :posts
+    end
+##if going one more deep
+      #resources :posts do
+      #resources :comments
+      #end
+  end
 end
